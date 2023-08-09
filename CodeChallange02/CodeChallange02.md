@@ -52,6 +52,6 @@ Space Complexity: A new array of length n+1 is created to hold the modified elem
 
 ### Output
 
-2 4 5 6 -8 
+`2 4 5 6 -8 
 ---------
-42 8 16 15 32 -8 
+42 8 16 15 32 -8`
