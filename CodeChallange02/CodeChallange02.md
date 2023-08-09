@@ -33,7 +33,7 @@ Space Complexity: A new array of length n+1 is created to hold the modified elem
 
 ### Code
 
-`    public static int[] insertShiftArray(int[] arr, int index) {
+     `public static int[] insertShiftArray(int[] arr, int index) {
         int insertToMiddle = arr.length / 2;
         int[] finalArr = new int[arr.length + 1];
         for (int i = 0; i < insertToMiddle; i++) {
