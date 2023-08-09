@@ -12,21 +12,7 @@ The challenge is to create a function called reverseArray that takes an array as
 
 #### Whiteboard pic
 
-![](img/final.png)
-
-#### for better quality pics 
-
-![](img/1.png)
-
-![](img/2.png)
-
-![](img/3.png)
-
-![](img/4.png)
-
-![](img/code.png)
-
-![](img/output.png)
+![](img/CC%201.jpg)
 
 ---
 
