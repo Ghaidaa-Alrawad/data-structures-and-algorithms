@@ -12,7 +12,7 @@ The challenge is to create a function called insertShiftArray that takes an arra
 
 #### Whiteboard pic
 
-![](img/CC.jpg)
+![](img/CC%20(3).jpg)
 
 ---
 
