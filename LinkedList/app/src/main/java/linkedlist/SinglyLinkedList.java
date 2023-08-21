@@ -1,9 +1,9 @@
 package LinkedList.app.src.main.java.linkedlist;
 
-public class LnkedList {
+public class SinglyLinkedList {
     public Node head;
 
-    public LnkedList() {
+    public SinglyLinkedList() {
         this.head = null;
     }
 
@@ -35,16 +35,5 @@ public class LnkedList {
         return result.toString();
     }
 
-    public static void main(String[] args) {
-        LnkedList linkedList = new LnkedList();
 
-        linkedList.insert(3);
-        linkedList.insert(2);
-        linkedList.insert(1);
-
-        System.out.println("Linked List: " + linkedList.toString());
-
-        System.out.println("Includes 2: " + linkedList.includes(2));
-        System.out.println("Includes 50: " + linkedList.includes(50));
-    }
 }
