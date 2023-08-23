@@ -12,6 +12,7 @@
 | 04 Mock Interviews                    | [Mock Interviews](./CodeChallange04/CodeChallange04.md)  |
 | 05 Linked List (dataStructure)        | [LinkedList](./LinkedList/LinkedList.md)                 |
 | 06 Linked List (dataStructure)        | [LinkedListClass06](./LinkedList/LinkedListClass06.md)   |
+| 07 Linked List (dataStructure)        | [LinkedListClass07](./LinkedList/LinkedListClass07.md)   |
 
 
 
