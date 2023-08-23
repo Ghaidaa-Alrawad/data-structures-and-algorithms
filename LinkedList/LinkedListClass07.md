@@ -1,9 +1,57 @@
-package LinkedList.app.src.main.java.list;
+# Linked Lists (class06)
 
-public class SinglyLinkedList {
+---
+
+## Description of the challenge
+
+The challenge is to find the value of the node that is k places from the end of the linked list, where k is a non-negative integer. If k is greater than or equal to the length of the linked list, an exception should be thrown. The goal is to implement an efficient solution that works for various scenarios.
+
+---
+
+## Whiteboard
+
+#### Whiteboard pic
+
+![](img/cc07.jpg)
+
+---
+
+## Approach & Efficiency
+
+- The approach involves using two pointers, fast and slow, to traverse the linked list. 
+- The fast pointer is moved k + 1 steps ahead, ensuring that there are k nodes between the fast and slow pointers. 
+- Then both pointers move together until fast reaches the end of the linked list. The slow pointer will be pointing to the desired node.
+
+The algorithm has a time complexity of O(N) and a space complexity of O(1), making it an efficient solution for finding the kth node from the end of the linked list.
+
+---
+
+## Solution
+
+### Code
+
+#### Node
+
+```java
+public class Node {
+
+    public int value;
+    public Node next;
+
+    public Node(int value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+```
+
+#### linkedList
+
+```java
+public class LinkedList {
     public Node head;
 
-    public SinglyLinkedList() {
+    public LinkedList() {
         this.head = null;
     }
 
@@ -24,7 +72,6 @@ public class SinglyLinkedList {
         return false;
     }
 
-    // challenge 06
     public void append(int value) {
         Node newNode = new Node(value);
         if (head == null) {
@@ -70,8 +117,8 @@ public class SinglyLinkedList {
             current.next = newNode;
         }
     }
-
-    // challenge 07
+    
+    //Challenge 07
     public int kthFromEnd(int k) {
         if (k < 0) {
             throw new IllegalArgumentException("k must be a non-negative integer");
@@ -100,8 +147,7 @@ public class SinglyLinkedList {
 
         return slow.value;
     }
-
-
+    
     public String toString() {
         StringBuilder result = new StringBuilder();
         Node current = head;
@@ -112,6 +158,5 @@ public class SinglyLinkedList {
         result.append("NULL");
         return result.toString();
     }
-
-
 }
+```
