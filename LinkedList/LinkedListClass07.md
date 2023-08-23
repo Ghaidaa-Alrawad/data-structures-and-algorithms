@@ -1,4 +1,4 @@
-# Linked Lists (class06)
+# Linked Lists (Challenge 07)
 
 ---
 
