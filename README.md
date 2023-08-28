@@ -13,3 +13,4 @@
 | 05 Linked List (dataStructure)        | [LinkedList](./LinkedList/LinkedList.md)                 |
 | 06 Linked List (dataStructure)        | [LinkedListClass06](./LinkedList/LinkedListClass06.md)   |
 | 07 Linked List (dataStructure)        | [LinkedListClass07](./LinkedList/LinkedListClass07.md)   |
+| 08 Linked List (dataStructure)        | [LinkedListClass08](./LinkedList/LinkedListClass08.md)   |

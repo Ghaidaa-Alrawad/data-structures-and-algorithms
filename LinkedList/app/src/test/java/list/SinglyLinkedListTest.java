@@ -106,4 +106,23 @@ public class SinglyLinkedListTest {
         list6.append(8);
         assertEquals(8, list6.kthFromEnd(0));
     }
+
+    // challenge 08
+    @Test
+    public void testZipLists() {
+        SinglyLinkedList li1 = new SinglyLinkedList();
+        li1.append(1);
+        li1.append(3);
+        li1.append(2);
+
+        SinglyLinkedList li2 = new SinglyLinkedList();
+        li2.append(5);
+        li2.append(9);
+        li2.append(4);
+
+        SinglyLinkedList zippedList = li1.zipLists(li1, li2);
+
+        String expectedOutput = "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL";
+        assertEquals(expectedOutput, zippedList.toString());
+    }
 }
