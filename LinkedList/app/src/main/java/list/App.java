@@ -64,6 +64,23 @@ public class App {
         } catch (IllegalArgumentException e) {
             System.out.println("Error Message: "+e.getMessage());
         }
+
+        System.out.println("---");
+        System.out.println("challenge 08 start: ");
+
+        SinglyLinkedList li1 = new SinglyLinkedList();
+        li1.append(1);
+        li1.append(3);
+        li1.append(2);
+
+        SinglyLinkedList li2 = new SinglyLinkedList();
+        li2.append(5);
+        li2.append(9);
+        li2.append(4);
+
+        SinglyLinkedList zippedList = li1.zipLists(li1, li2);
+        System.out.printf("ZippedList: " + zippedList);
+
     }
 }
 

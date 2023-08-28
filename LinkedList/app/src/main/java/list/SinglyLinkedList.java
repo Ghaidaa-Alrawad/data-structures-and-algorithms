@@ -1,5 +1,7 @@
 package LinkedList.app.src.main.java.list;
 
+import java.util.LinkedList;
+
 public class SinglyLinkedList {
     public Node head;
 
@@ -99,6 +101,36 @@ public class SinglyLinkedList {
         }
 
         return slow.value;
+    }
+
+    //challenge 08
+    public SinglyLinkedList zipLists(SinglyLinkedList li1, SinglyLinkedList li2){
+        SinglyLinkedList zippedList = new SinglyLinkedList();
+
+        Node current1 = li1.head;
+        Node current2 = li2.head;
+
+        while (current1 != null && current2 != null){
+            zippedList.append(current1.value);
+            zippedList.append(current2.value);
+
+            current1 = current1.next;
+            current2 = current2.next;
+        }
+
+        while (current1 != null){
+            zippedList.append(current1.value);
+
+            current1 = current1.next;
+        }
+
+        while (current2 != null){
+            zippedList.append(current2.value);
+
+            current2 = current2.next;
+        }
+
+        return zippedList;
     }
 
 
