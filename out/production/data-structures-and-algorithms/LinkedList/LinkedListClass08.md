@@ -12,7 +12,7 @@ The challenge is to merge two singly linked lists alternately, creating a new li
 
 #### Whiteboard pic
 
-![](img/cc07.jpg)
+![](img/CC08.jpg)
 
 ---
 
