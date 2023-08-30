@@ -1,6 +1,7 @@
 package LinkedList.app.src.main.java.list;
 
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class SinglyLinkedList {
     public Node head;
@@ -73,7 +74,7 @@ public class SinglyLinkedList {
         }
     }
 
-    // challenge 07
+//     challenge 07
     public int kthFromEnd(int k) {
         if (k < 0) {
             throw new IllegalArgumentException("k must be a non-negative integer");
@@ -103,7 +104,7 @@ public class SinglyLinkedList {
         return slow.value;
     }
 
-    //challenge 08
+//    challenge 08
     public SinglyLinkedList zipLists(SinglyLinkedList li1, SinglyLinkedList li2){
         SinglyLinkedList zippedList = new SinglyLinkedList();
 
@@ -133,6 +134,35 @@ public class SinglyLinkedList {
         return zippedList;
     }
 
+    // Challenge 09
+    public boolean isPalindrome() {
+        if (head == null) {
+            return true;
+        }
+
+        Node slow = head;
+        Node fast = head;
+        Stack<Integer> stack = new Stack<>();
+
+        while (fast != null && fast.next != null) {
+            stack.push(slow.value);
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        if (fast != null) {
+            slow = slow.next;
+        }
+
+        while (slow != null) {
+            if (slow.value != stack.pop()) {
+                return false;
+            }
+            slow = slow.next;
+        }
+
+        return true;
+    }
 
     public String toString() {
         StringBuilder result = new StringBuilder();

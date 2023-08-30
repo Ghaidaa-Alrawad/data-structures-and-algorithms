@@ -79,8 +79,38 @@ public class App {
         li2.append(4);
 
         SinglyLinkedList zippedList = li1.zipLists(li1, li2);
-        System.out.printf("ZippedList: " + zippedList);
+        System.out.println("ZippedList: " + zippedList);
 
+        System.out.println("---");
+        System.out.println("challenge 09 start: ");
+
+        SinglyLinkedList isPalindrome = new SinglyLinkedList();
+        isPalindrome.append('t');
+        isPalindrome.append('a');
+        isPalindrome.append('c');
+        isPalindrome.append('o');
+        isPalindrome.append('c');
+        isPalindrome.append('a');
+        isPalindrome.append('t');
+
+        SinglyLinkedList isPalindrome2 = new SinglyLinkedList();
+        isPalindrome2.append('g');
+        isPalindrome2.append('h');
+        isPalindrome2.append('a');
+        isPalindrome2.append('i');
+        isPalindrome2.append('d');
+        isPalindrome2.append('a');
+        isPalindrome2.append('a');
+
+        SinglyLinkedList l = new SinglyLinkedList();
+        l.append('D');
+        l.append('e');
+        l.append('e');
+        l.append('D');
+
+        System.out.println(isPalindrome.isPalindrome());
+        System.out.println(isPalindrome2.isPalindrome());
+        System.out.println(l.isPalindrome());
     }
 }
 
