@@ -3,6 +3,7 @@
  */
 package StackAndQueue.lib.src.main.java.stackqueue;
 
+import StackAndQueue.lib.src.main.java.stackqueue.queue.PseudoQueue;
 import StackAndQueue.lib.src.main.java.stackqueue.queue.Queue;
 import StackAndQueue.lib.src.main.java.stackqueue.stack.Stack;
 
@@ -69,6 +70,29 @@ public class Library {
 
         // here the output should not be empty now
         System.out.println("Is the satck list is empty??  " + s1.isEmpty());
+
+        // PseudoQueue Challenge
+        System.out.println("---");
+        System.out.println("PseudoQueue Challenge: ");
+
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+
+        // Enqueue some values
+        pseudoQueue.enqueue(5);
+        pseudoQueue.enqueue(10);
+        pseudoQueue.enqueue(15);
+        pseudoQueue.enqueue(20);
+        System.out.println(pseudoQueue);
+
+        // Dequeue the first value
+        int dequeuedValue1 = pseudoQueue.dequeue();
+        System.out.println("Dequeued: " + dequeuedValue1);
+        System.out.println(pseudoQueue);
+
+        // Dequeue the second value
+        int dequeuedValue2 = pseudoQueue.dequeue();
+        System.out.println("Dequeued: " + dequeuedValue2);
+        System.out.println(pseudoQueue);
 
     }
 }
