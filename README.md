@@ -16,5 +16,7 @@
 | 08 Linked List (dataStructure)        | [LinkedListClass08](./LinkedList/LinkedListClass08.md) |
 | 09 Mock Interviews                    | [Mock Interviews](./LinkedList/LinkedListClass09.md)   |
 | 10 Stack And Queue                    | [Stack And Queue](./StackAndQueue/StackAndQueue.md)                                  |
+| 11 PseudoQueue                        | [PseudoQueue](./StackAndQueue/PseudoQueue.md)                                  |
+
 
 

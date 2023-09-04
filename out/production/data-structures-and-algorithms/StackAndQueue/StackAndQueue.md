@@ -16,7 +16,7 @@ The challenge is to implement a generic queue data structure using a linked list
 
 #### Whiteboard pic
 
-![](img/QueueQ.jpg)
+![](img/QueueW.jpg)
 
 ---
 
@@ -100,7 +100,7 @@ The challenge is to implement a generic stack data structure using a linked list
 
 #### Whiteboard pic
 
-![](img/CC09.jpg)
+![](img/StackW.jpg)
 
 ---
 
@@ -122,36 +122,40 @@ The challenge is to implement a generic stack data structure using a linked list
 #### Input
 
 ```java
-public class App{
-    public static void main(String[]args){
+public class Stack<T> {
+    private Node<T> top;
 
-        SinglyLinkedList isPalindrome = new SinglyLinkedList();
-        isPalindrome.append('t');
-        isPalindrome.append('a');
-        isPalindrome.append('c');
-        isPalindrome.append('o');
-        isPalindrome.append('c');
-        isPalindrome.append('a');
-        isPalindrome.append('t');
+    public Stack(){
+        top = null;
+    }
 
-        SinglyLinkedList isPalindrome2 = new SinglyLinkedList();
-        isPalindrome2.append('g');
-        isPalindrome2.append('h');
-        isPalindrome2.append('a');
-        isPalindrome2.append('i');
-        isPalindrome2.append('d');
-        isPalindrome2.append('a');
-        isPalindrome2.append('a');
+    public void push(T value){
+        Node<T> newNode = new Node<>(value);
+        newNode.next = top;
+        top = newNode;
+    }
 
-        SinglyLinkedList l = new SinglyLinkedList();
-        l.append('D');
-        l.append('e');
-        l.append('e');
-        l.append('D');
+    public T pop(){
+        if (isEmpty()){
+            System.out.println("Stack is empty, can't pop");
+        }
 
-        System.out.println(isPalindrome.isPalindrome());
-        System.out.println(isPalindrome2.isPalindrome());
-        System.out.println(l.isPalindrome());
-    }   
+        T value = top.value;
+        top = top.next;
+        return value;
+    }
+
+    public T peek(){
+        if (isEmpty()){
+            System.out.println("Stack is empty, there is to peek");
+            return null;
+        }
+        return top.value;
+    }
+
+    public boolean isEmpty(){
+        return top == null;
+    }
 }
+
 ```
