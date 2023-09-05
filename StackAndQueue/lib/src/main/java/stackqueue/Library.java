@@ -3,6 +3,8 @@
  */
 package StackAndQueue.lib.src.main.java.stackqueue;
 
+import StackAndQueue.lib.src.main.java.stackqueue.queue.AnimalShel.Animal;
+import StackAndQueue.lib.src.main.java.stackqueue.queue.AnimalShel.AnimalShelter;
 import StackAndQueue.lib.src.main.java.stackqueue.queue.PseudoQueue;
 import StackAndQueue.lib.src.main.java.stackqueue.queue.Queue;
 import StackAndQueue.lib.src.main.java.stackqueue.stack.Stack;
@@ -93,6 +95,23 @@ public class Library {
         int dequeuedValue2 = pseudoQueue.dequeue();
         System.out.println("Dequeued: " + dequeuedValue2);
         System.out.println(pseudoQueue);
+
+        System.out.println("---");
+        System.out.println("Animal Shelter Challenge :");
+
+        AnimalShelter shelter = new AnimalShelter();
+
+        shelter.enqueue(new Animal("cat", "Farhoud"));
+        shelter.enqueue(new Animal("dog", "Doggy"));
+        shelter.enqueue(new Animal("cat", "Mesh Mesh"));
+
+        // animal shelter contents
+        System.out.println(shelter);
+
+        // dequeue dog
+        System.out.println("Here will dequeue the dog and his name is: " + shelter.dequeue("dog").getName());
+
+        System.out.println("Here will dequeue the oldest cat and his name is: " + shelter.dequeue("cat").getName());
 
     }
 }
