@@ -34,7 +34,7 @@ The approach used in the `ValidBrackets` class is to use a stack to keep track o
 
 #### Code
 
-[ValidBracketsCode](StackAndQueue/lib/src/main/java/stackqueue/stack/ValidBrackets.java)
+[ValidBracketsCode](stackqueue/stack/ValidBrackets.java)
 
 ```java
 public class ValidBrackets {
