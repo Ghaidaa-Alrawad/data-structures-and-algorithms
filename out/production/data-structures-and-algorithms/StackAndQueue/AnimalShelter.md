@@ -1,4 +1,4 @@
-# PseudoQueue (Challenge 11)
+# Animal Shelter (Challenge 12)
 
 ---
 
@@ -33,7 +33,7 @@ The preference can be either "dog" or "cat".
 
 ### Output
 
-![](img/outputCC12.png)
+![](img/cc12output.png)
 
 #### code
 
