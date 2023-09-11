@@ -8,6 +8,7 @@ import StackAndQueue.lib.src.main.java.stackqueue.queue.AnimalShel.AnimalShelter
 import StackAndQueue.lib.src.main.java.stackqueue.queue.PseudoQueue;
 import StackAndQueue.lib.src.main.java.stackqueue.queue.Queue;
 import StackAndQueue.lib.src.main.java.stackqueue.stack.Stack;
+import StackAndQueue.lib.src.main.java.stackqueue.stack.ValidBrackets;
 
 public class Library {
     public static void main(String[] args) {
@@ -113,5 +114,13 @@ public class Library {
 
         System.out.println("Here will dequeue the oldest cat and his name is: " + shelter.dequeue("cat").getName());
 
+        System.out.println("---");
+        System.out.println("Valid Bracket Challenge :");
+
+        ValidBrackets valid1 = new ValidBrackets();
+        System.out.println("input :{[()]} , "+ valid1.validBracket("{[()]}")); // should be true
+
+        ValidBrackets valid2 = new ValidBrackets();
+        System.out.println("input :[({}] , "+valid2.validBracket("[({}]")); // should be false
     }
 }
