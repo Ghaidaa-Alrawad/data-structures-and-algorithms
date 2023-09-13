@@ -18,6 +18,7 @@
 | 10 Stack And Queue                    | [Stack And Queue](./StackAndQueue/StackAndQueue.md)      |
 | 11 PseudoQueue                        | [PseudoQueue](./StackAndQueue/PseudoQueue.md)            |
 | 12 Animal Shelter                     | [AnimalShelter](./StackAndQueue/AnimalShelter.md)        |
+| 13 Valid Brackets                     | [ValidBrackets](./StackAndQueue/ValidBrackets.md)        |
 
 
 
