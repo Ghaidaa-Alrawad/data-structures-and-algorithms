@@ -13,8 +13,32 @@ public class ValidBracketsTest {
     }
 
     @Test
-    public void testingTrue(){
+    public void testingTrueWithCharacters(){
         ValidBrackets v2 = new ValidBrackets();
         assertTrue(v2.validBracket("()[[Extra Characters]]"));
+    }
+
+    @Test
+    public void testEmptyString() {
+        ValidBrackets v3 = new ValidBrackets();
+        assertTrue(v3.validBracket(""));
+    }
+
+    @Test
+    public void testSingleValidPair() {
+        ValidBrackets v4 = new ValidBrackets();
+        assertTrue(v4.validBracket("()"));
+    }
+
+    @Test
+    public void testSingleInvalidPair() {
+        ValidBrackets v5 = new ValidBrackets();
+        assertFalse(v5.validBracket(")("));
+    }
+
+    @Test
+    public void testNestedValidPairs() {
+        ValidBrackets v6 = new ValidBrackets();
+        assertTrue(v6.validBracket("([]{})"));
     }
 }

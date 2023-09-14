@@ -11,7 +11,7 @@ In this game, you have an array of players, and a number 'k'. Players sit in a c
 
 ## Whiteboard
 
-![](img/CC11.jpg)
+![](img/CC14.jpg)
 
 ---
 
@@ -28,69 +28,33 @@ In this game, you have an array of players, and a number 'k'. Players sit in a c
 
 ### Output
 
-![](img/outputInt.png)
+![](img/duckGooseOutput.png)
 
 #### code
 
+[DuckDuckGooseCode](./lib/src/main/java/stackqueue/queue/DuckDuckGoose.java)
+
+
 ```java
-public class PseudoQueue<T> {
-    public Stack<T> stack1;
-    public Stack<T> stack2;
+public class DuckDuckGoose {
+    public static String duckDuckGoose(String[] players, int k) {
+        Queue<String> queue = new Queue<>();
+        for (String player : players){
+            queue.enqueue(player);
+        }
 
-    public PseudoQueue() {
-        this.stack1 = new Stack<>();
-        this.stack2 = new Stack<>();
-    }
+        int count = players.length;
 
-    public void enqueue(T value) {
-        stack1.push(value);
-    }
-
-    public T dequeue() {
-        if (stack2.isEmpty()) {
-            while (!stack1.isEmpty()) {
-                stack2.push((T) stack1.pop());
+        while (count > 1){
+            for (int i = 1; i < k; i++){
+                String dequeue = queue.dequeue();
+                queue.enqueue(dequeue);
             }
-        }
 
-        return stack2.pop();
+            queue.dequeue();
+            count--;
+        }
+        return queue.peek();
     }
-
-    public boolean isEmpty() {
-        return stack1.isEmpty() && stack2.isEmpty();
-    }
-
-    @Override
-    public String toString() {
-        if (isEmpty()) {
-            return "Queue is empty";
-        }
-
-        StringBuilder allValues = new StringBuilder();
-        allValues.append("FRONT -> ");
-
-        Stack<T> tempStack = new Stack<>();
-
-        if (stack2.isEmpty()) {
-            while (!stack1.isEmpty()) {
-                stack2.push(stack1.pop());
-            }
-        }
-
-        while (!stack2.isEmpty()) {
-            T value = stack2.pop();
-            allValues.append("{ ").append(value).append(" } -> ");
-            tempStack.push(value);
-        }
-
-        while (!tempStack.isEmpty()) {
-            stack1.push(tempStack.pop());
-        }
-
-        allValues.append("REAR");
-        return allValues.toString();
-    }
-
 }
-
 ```
