@@ -16,48 +16,38 @@ public class PseudoQueue<T> {
     }
 
     public T dequeue() {
-        if (stack2.isEmpty()) {
-            while (!stack1.isEmpty()) {
-                stack2.push((T) stack1.pop());
-            }
-        }
-
-        return stack2.pop();
+        if (!stack1.isEmpty()){
+            return stack1.pop();
+        }else return null;
     }
+
+
 
     public boolean isEmpty() {
         return stack1.isEmpty() && stack2.isEmpty();
     }
 
     @Override
-    public String toString() {
-        if (isEmpty()) {
-            return "Queue is empty";
-        }
+    public String toString(){
+        return stack1.toString();
+    }
 
-        StringBuilder allValues = new StringBuilder();
-        allValues.append("FRONT -> ");
+    public static void main(String[] args) {
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
 
-        Stack<T> tempStack = new Stack<>();
+        pseudoQueue.enqueue(5);
+        pseudoQueue.enqueue(10);
+        pseudoQueue.enqueue(15);
+        pseudoQueue.enqueue(20);
+        System.out.println(pseudoQueue);
 
-        if (stack2.isEmpty()) {
-            while (!stack1.isEmpty()) {
-                stack2.push(stack1.pop());
-            }
-        }
+        int dequeuedValue1 = pseudoQueue.dequeue();
+        System.out.println("Dequeued: " + dequeuedValue1);
+        System.out.println(pseudoQueue);
 
-        while (!stack2.isEmpty()) {
-            T value = stack2.pop();
-            allValues.append("{ ").append(value).append(" } -> ");
-            tempStack.push(value);
-        }
-
-        while (!tempStack.isEmpty()) {
-            stack1.push(tempStack.pop());
-        }
-
-        allValues.append("REAR");
-        return allValues.toString();
+        int dequeuedValue2 = pseudoQueue.dequeue();
+        System.out.println("Dequeued: " + dequeuedValue2);
+        System.out.println(pseudoQueue);
     }
 
 }
