@@ -78,25 +78,30 @@ public class Library {
         // PseudoQueue Challenge
         System.out.println("---");
         System.out.println("PseudoQueue Challenge: ");
-
         PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
 
-        // Enqueue some values
-        pseudoQueue.enqueue(5);
-        pseudoQueue.enqueue(10);
-        pseudoQueue.enqueue(15);
+        // Enqueue some elements
         pseudoQueue.enqueue(20);
-        System.out.println(pseudoQueue);
+        pseudoQueue.enqueue(15);
+        pseudoQueue.enqueue(10);
+        pseudoQueue.enqueue(5);
 
-        // Dequeue the first value
-        int dequeuedValue1 = pseudoQueue.dequeue();
-        System.out.println("Dequeued: " + dequeuedValue1);
-        System.out.println(pseudoQueue);
+        // Print the initial queue
+        System.out.println("Queue Before: " + pseudoQueue.toString());
 
-        // Dequeue the second value
+        // Dequeue an element
+        int dequeuedValue = pseudoQueue.dequeue();
+        System.out.println("Dequeued Value: " + dequeuedValue);
+
+        // Print the updated queue
+        System.out.println("Queue After 1 : " + pseudoQueue.toString());
+
         int dequeuedValue2 = pseudoQueue.dequeue();
-        System.out.println("Dequeued: " + dequeuedValue2);
-        System.out.println(pseudoQueue);
+        System.out.println("Dequeued Value: " + dequeuedValue2);
+
+        System.out.println("Queue After 2 : " + pseudoQueue.toString());
+
+
 
         System.out.println("---");
         System.out.println("Animal Shelter Challenge :");

@@ -20,15 +20,18 @@ The PseudoQueue class uses two stacks (stack1 and stack2) to implement the queue
 
 The efficiency of this implementation depends on the size of the input. The enqueue operation has a time complexity of O(1) because it directly pushes elements onto stack1. The dequeue operation has an average time complexity of O(n) if stack2 is empty, where n is the number of elements in the queue. This is because it may need to transfer all elements from stack1 to stack2 before performing the dequeue operation.
 
+
 ---
 
 ## Solution
 
 ### Output
 
-![](img/outputInt.png)
+![](img/outputPSQ.png)
 
 #### code
+
+[PseudoQueueCode](./lib/src/main/java/stackqueue/queue/PseudoQueue.java)
 
 ```java
 public class PseudoQueue<T> {
@@ -61,34 +64,28 @@ public class PseudoQueue<T> {
     @Override
     public String toString() {
         if (isEmpty()) {
-            return "Queue is empty";
+            return "PseudoQueue is empty.";
         }
 
-        StringBuilder allValues = new StringBuilder();
-        allValues.append("FRONT -> ");
+        StringBuilder sb = new StringBuilder("PseudoQueue: ");
 
         Stack<T> tempStack = new Stack<>();
-
-        if (stack2.isEmpty()) {
-            while (!stack1.isEmpty()) {
-                stack2.push(stack1.pop());
-            }
-        }
-
         while (!stack2.isEmpty()) {
-            T value = stack2.pop();
-            allValues.append("{ ").append(value).append(" } -> ");
-            tempStack.push(value);
+            tempStack.push(stack2.pop());
         }
-
         while (!tempStack.isEmpty()) {
-            stack1.push(tempStack.pop());
+            T value = tempStack.pop();
+            sb.append(value).append(" ");
+            stack2.push(value);
         }
 
-        allValues.append("REAR");
-        return allValues.toString();
+        while (!stack1.isEmpty()) {
+            T value = stack1.pop();
+            sb.append(value).append(" ");
+            stack2.push(value);
+        }
+
+        return sb.toString().trim();
     }
-
 }
-
 ```
