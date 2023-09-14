@@ -16,13 +16,9 @@ public class PseudoQueue<T> {
     }
 
     public T dequeue() {
-        if (stack2.isEmpty()) {
-            while (!stack1.isEmpty()) {
-                stack2.push((T) stack1.pop());
-            }
-        }
-
-        return stack2.pop();
+        if (!stack1.isEmpty()){
+            return stack1.pop();
+        }else return null;
     }
 
     public boolean isEmpty() {
