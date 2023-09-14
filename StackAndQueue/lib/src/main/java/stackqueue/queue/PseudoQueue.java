@@ -32,32 +32,29 @@ public class PseudoQueue<T> {
     @Override
     public String toString() {
         if (isEmpty()) {
-            return "Queue is empty";
+            return "PseudoQueue is empty.";
         }
 
-        StringBuilder allValues = new StringBuilder();
-        allValues.append("FRONT -> ");
+        StringBuilder sb = new StringBuilder();
 
         Stack<T> tempStack = new Stack<>();
-
-        if (stack2.isEmpty()) {
-            while (!stack1.isEmpty()) {
-                stack2.push(stack1.pop());
-            }
-        }
-
         while (!stack2.isEmpty()) {
-            T value = stack2.pop();
-            allValues.append("{ ").append(value).append(" } -> ");
-            tempStack.push(value);
+            tempStack.push(stack2.pop());
         }
-
         while (!tempStack.isEmpty()) {
-            stack1.push(tempStack.pop());
+            T value = tempStack.pop();
+            sb.append(value).append(" ");
+            stack2.push(value);
         }
 
-        allValues.append("REAR");
-        return allValues.toString();
+        while (!stack1.isEmpty()) {
+            T value = stack1.pop();
+            sb.append(value).append(" ");
+            stack2.push(value);
+        }
+
+        return sb.toString().trim();
     }
+
 
 }
