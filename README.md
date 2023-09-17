@@ -19,9 +19,5 @@
 | 11 PseudoQueue                        | [PseudoQueue](./StackAndQueue/PseudoQueue.md)            |
 | 12 Animal Shelter                     | [AnimalShelter](./StackAndQueue/AnimalShelter.md)        |
 | 13 Valid Brackets                     | [ValidBrackets](./StackAndQueue/ValidBrackets.md)        |
-| 14 DuckDuckGoose (Mock Interviews)                   | [DuckDuckGoose](./StackAndQueue/DuckDuckGoose.md)        |
-
-
-
-
-
+| 14 DuckDuckGoose (Mock Interviews)    | [DuckDuckGoose](./StackAndQueue/DuckDuckGoose.md)        |
+| 15 Trees (Binary \\ Search)           | [Trees](./Trees/Trees.md)                                |
