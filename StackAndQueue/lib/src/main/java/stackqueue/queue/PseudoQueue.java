@@ -55,6 +55,4 @@ public class PseudoQueue<T> {
 
         return sb.toString().trim();
     }
-
-
 }
