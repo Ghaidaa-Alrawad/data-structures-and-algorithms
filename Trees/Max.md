@@ -1,4 +1,4 @@
-# PseudoQueue (Challenge 11)
+# MAX (Challenge 16)
 
 ---
 
