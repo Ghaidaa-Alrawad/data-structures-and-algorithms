@@ -2,7 +2,7 @@ package Trees.app.src.main.java.trees;
 
 import java.util.ArrayList;
 
-public class BinaryTree<T> {
+public class BinaryTree<T extends Comparable<T>> {
     Node<T> root;
 
     public BinaryTree(){
@@ -56,5 +56,21 @@ public class BinaryTree<T> {
         }
 
         return tArrayList;
+    }
+
+    public T findMaximumValue() {
+        if (root == null) {
+            throw new NullPointerException("Tree is Empty");
+        }
+
+        return findMaximumValue(root);
+    }
+
+    private T findMaximumValue(Node<T> current) {
+        if (current.right != null) {
+            return findMaximumValue(current.right);
+        }
+
+        return current.value;
     }
 }

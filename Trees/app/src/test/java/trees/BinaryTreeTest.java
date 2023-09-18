@@ -2,6 +2,7 @@ package Trees.app.src.test.java.trees;
 
 import Trees.app.src.main.java.trees.BinarySearchTree;
 import Trees.app.src.main.java.trees.BinaryTree;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

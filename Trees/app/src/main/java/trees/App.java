@@ -28,6 +28,12 @@ public class App {
 
         ArrayList<Integer> postOrderResult = b1.postOrderTraverse(b1.getRoot(), new ArrayList<>());
         System.out.println("Postorder Traversal: " + postOrderResult);
+
+        System.out.println("---");
+        System.out.println("MAX Coding challenge");
+
+        int maxValue = b1.findMaximumValue();
+        System.out.println("Maximum value in the tree: " + maxValue);
     }
     }
 

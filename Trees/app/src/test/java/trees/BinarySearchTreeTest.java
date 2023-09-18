@@ -8,9 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BinarySearchTreeTest {
     private BinarySearchTree<Integer> bst;
@@ -87,5 +85,59 @@ public class BinarySearchTreeTest {
         List<Integer> result = bst.postOrderTraverse(bst.getRoot(), new ArrayList<>());
 
         assertEquals(expected, result);
+    }
+
+    // testing for cc 16
+    @Test
+    public void testFindMaximumValueWithEmptyTree() {
+        try {
+            bst.findMaximumValue();
+            fail("Expected NullPointerException for an empty tree");
+        } catch (NullPointerException e) {
+            assertEquals("Tree is Empty", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testFindMaximumValueWithSingleNode() {
+        bst.add(42);
+        int maxValue = bst.findMaximumValue();
+        assertEquals(42, maxValue);
+    }
+
+    @Test
+    public void testFindMaximumValueWithLeftSubtree() {
+        bst.add(50);
+        bst.add(30);
+        bst.add(20);
+        bst.add(40);
+
+        int maxValue = bst.findMaximumValue();
+        assertEquals(50, maxValue);
+    }
+
+    @Test
+    public void testFindMaximumValueWithRightSubtree() {
+        bst.add(50);
+        bst.add(70);
+        bst.add(60);
+        bst.add(80);
+
+        int maxValue = bst.findMaximumValue();
+        assertEquals(80, maxValue);
+    }
+
+    @Test
+    public void testFindMaximumValueWithMixedSubtree() {
+        bst.add(50);
+        bst.add(30);
+        bst.add(70);
+        bst.add(20);
+        bst.add(40);
+        bst.add(60);
+        bst.add(80);
+
+        int maxValue = bst.findMaximumValue();
+        assertEquals(80, maxValue);
     }
 }

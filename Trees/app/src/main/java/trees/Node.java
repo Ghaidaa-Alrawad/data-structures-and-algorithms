@@ -3,8 +3,8 @@ package Trees.app.src.main.java.trees;
 public class Node <T> {
 
     public T value;
-    public Node left;
-    public Node right;
+    public Node<T> left;
+    public Node<T> right;
 
     public Node(T value) {
         this.value = value;
