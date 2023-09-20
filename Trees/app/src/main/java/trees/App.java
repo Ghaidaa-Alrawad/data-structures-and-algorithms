@@ -34,6 +34,11 @@ public class App {
 
         int maxValue = b1.findMaximumValue();
         System.out.println("Maximum value in the tree: " + maxValue);
+
+        System.out.println("---");
+        System.out.println("Breadth First challenge");
+
+        System.out.println(b1.breadthFirst());
     }
     }
 

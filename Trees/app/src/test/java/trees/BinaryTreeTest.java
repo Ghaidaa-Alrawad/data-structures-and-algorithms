@@ -3,6 +3,7 @@ package Trees.app.src.test.java.trees;
 import Trees.app.src.main.java.trees.BinarySearchTree;
 import Trees.app.src.main.java.trees.BinaryTree;
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -58,5 +59,38 @@ public class BinaryTreeTest {
         expected.add(50);
 
         assertIterableEquals(expected, result);
+    }
+
+    private BinarySearchTree<Integer> tree;
+
+    @BeforeEach
+    public void setUp() {
+        tree = new BinarySearchTree<>();
+    }
+
+    @Test
+    public void testBreadthFirstEmptyTree() {
+        ArrayList<Integer> result = tree.breadthFirst();
+        assertTrue(result.isEmpty());
+    }
+
+    @Test
+    public void testBreadthFirstSingleNodeTree() {
+        tree.add(10);
+        ArrayList<Integer> result = tree.breadthFirst();
+        assertEquals(1, result.size());
+        assertEquals(10, result.get(0));
+    }
+
+    @Test
+    public void testBreadthFirstMultipleNodeTree() {
+        tree.add(10);
+        tree.add(5);
+        tree.add(15);
+        tree.add(3);
+        tree.add(7);
+        ArrayList<Integer> result = tree.breadthFirst();
+        assertEquals(5, result.size());
+        assertArrayEquals(new Integer[]{10, 5, 15, 3, 7}, result.toArray());
     }
 }

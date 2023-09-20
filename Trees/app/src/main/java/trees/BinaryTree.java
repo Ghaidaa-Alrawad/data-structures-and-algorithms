@@ -1,6 +1,8 @@
 package Trees.app.src.main.java.trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree<T extends Comparable<T>> {
     Node<T> root;
@@ -72,5 +74,31 @@ public class BinaryTree<T extends Comparable<T>> {
         }
 
         return current.value;
+    }
+
+    public ArrayList<T> breadthFirst(){
+
+        ArrayList<T> result = new ArrayList<>();
+
+        if (root == null) {
+            return result;
+        }
+
+        Queue<Node<T>> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()){
+            Node<T> currentNode = queue.poll();
+            result.add(currentNode.value);
+
+            if (currentNode.left != null){
+                queue.add(currentNode.left);
+            }
+
+            if (currentNode.right != null){
+                queue.add(currentNode.right);
+            }
+        }
+        return result;
     }
 }
