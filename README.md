@@ -22,4 +22,5 @@
 | 14 DuckDuckGoose (Mock Interviews)    | [DuckDuckGoose](./StackAndQueue/DuckDuckGoose.md)        |
 | 15 Trees (Binary \\ Search)           | [Trees](./Trees/Trees.md)                                |
 | 16 MaxElement                         | [TreesMaxElement](./Trees/Max.md)                        |
-| 17 Breadth-First Traversal            | [Breadth-First](./Trees/breadthFirst.md)                        |
+| 17 Breadth-First Traversal            | [Breadth-First](./Trees/breadthFirst.md)                 |
+| 18 Fuzz Buzz                          | [FuzzBuzzTree](./Trees/FuzzBuzzTree.md)                  |
