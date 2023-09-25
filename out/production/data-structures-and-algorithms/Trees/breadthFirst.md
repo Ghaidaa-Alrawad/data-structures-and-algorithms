@@ -1,4 +1,4 @@
-#  breadth-first traversal (Challenge 17)
+#  Breadth-First Traversal (Challenge 17)
 
 ---
 
