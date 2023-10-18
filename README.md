@@ -25,4 +25,4 @@
 | 17 Breadth-First Traversal            | [Breadth-First](./Trees/breadthFirst.md)                 |
 | 18 Fuzz Buzz                          | [FuzzBuzzTree](./Trees/FuzzBuzzTree.md)                  |
 | 26 Insertion Sort                     | [InsertionSort](./InsertionSort/InsertionSort.md)        |
-| 26 Merge Sort                         | [MergeSort](./mergeSort/mergeSort.md)                    |
+| 27 Merge Sort                         | [MergeSort](./mergeSort/mergeSort.md)                    |
