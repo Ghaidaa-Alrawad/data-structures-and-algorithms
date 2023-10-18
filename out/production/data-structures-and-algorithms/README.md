@@ -24,3 +24,4 @@
 | 16 MaxElement                         | [TreesMaxElement](./Trees/Max.md)                        |
 | 17 Breadth-First Traversal            | [Breadth-First](./Trees/breadthFirst.md)                 |
 | 18 Fuzz Buzz                          | [FuzzBuzzTree](./Trees/FuzzBuzzTree.md)                  |
+| 26 Insertion Sort                     | [InsertionSort](./InsertionSort/InsertionSort.md)                 |
