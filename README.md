@@ -26,3 +26,4 @@
 | 18 Fuzz Buzz                          | [FuzzBuzzTree](./Trees/FuzzBuzzTree.md)                  |
 | 26 Insertion Sort                     | [InsertionSort](./InsertionSort/InsertionSort.md)        |
 | 27 Merge Sort                         | [MergeSort](./mergeSort/mergeSort.md)                    |
+| 28 Sorting Movies                     | [SortingMovies](.SortingMovies/SortingMovies.md)                |
