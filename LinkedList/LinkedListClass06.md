@@ -16,7 +16,6 @@ The challenge is to implement a singly linked list class that supports three met
 ![](img/insertBefore.jpg)
 ![](img/insertAfter.jpg)
 
-
 ---
 
 ## Approach & Efficiency

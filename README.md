@@ -27,3 +27,4 @@
 | 26 Insertion Sort                     | [InsertionSort](./InsertionSort/InsertionSort.md)        |
 | 27 Merge Sort                         | [MergeSort](./mergeSort/mergeSort.md)                    |
 | 28 Sorting Movies                     | [SortingMovies](./SortingMovies/SortingMovies.md)        |
+| 30 Hash Table                         | [hashTable](./hashTable/HashTable.md)            |
