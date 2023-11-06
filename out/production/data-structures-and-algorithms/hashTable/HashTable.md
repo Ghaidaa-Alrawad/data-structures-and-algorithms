@@ -6,6 +6,8 @@ Implement a simple hashtable class with set, get, has, keys, and hash methods. T
 
 ## Whiteboard
 
+![](img/CC%20(1).jpg)
+
 ---
 
 ## Approach & Efficiency
