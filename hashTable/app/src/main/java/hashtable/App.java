@@ -6,6 +6,8 @@ package hashTable.app.src.main.java.hashtable;
 public class App {
     public static void main(String[] args) {
         testHashtable();
+        System.out.println("---");
+        testRepeatedWordFinder();
     }
 
     private static void testHashtable() {
@@ -31,6 +33,37 @@ public class App {
 
         try {
             System.out.println("Value for key 'Seven': " + myHashtable.get("Seven"));
+        } catch (RuntimeException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+    }
+
+    private static void testRepeatedWordFinder() {
+        String input1 = "Once upon a time, there was a brave princess who...";
+        String input2 = "It was the best of times, it was the worst of times, it was the age of wisdom...";
+        String input3 = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs...";
+        String input4 = "This is a test sentence with no repeated words.";
+
+        try {
+            System.out.println("Repeated word in input1: " + RepeatedWordFinder.repeatedWord(input1));
+        } catch (RuntimeException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+
+        try {
+            System.out.println("Repeated word in input2: " + RepeatedWordFinder.repeatedWord(input2));
+        } catch (RuntimeException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+
+        try {
+            System.out.println("Repeated word in input3: " + RepeatedWordFinder.repeatedWord(input3));
+        } catch (RuntimeException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+
+        try {
+            System.out.println("Repeated word in input4: " + RepeatedWordFinder.repeatedWord(input4));
         } catch (RuntimeException e) {
             System.out.println("Exception: " + e.getMessage());
         }
