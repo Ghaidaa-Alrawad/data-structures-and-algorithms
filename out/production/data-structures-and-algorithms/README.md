@@ -2,7 +2,7 @@
 
 ---
 
-## Code Challanges Table
+## Code Challenges Table
 
 | Challenge Name                        | Challenge URL                                            |
 |---------------------------------------|----------------------------------------------------------|
@@ -27,4 +27,6 @@
 | 26 Insertion Sort                     | [InsertionSort](./InsertionSort/InsertionSort.md)        |
 | 27 Merge Sort                         | [MergeSort](./mergeSort/mergeSort.md)                    |
 | 28 Sorting Movies                     | [SortingMovies](./SortingMovies/SortingMovies.md)        |
-| 30 Hash Table                         | [hashTable](./hashTable/HashTable.md)            |
+| 30 Hash Table                         | [hashTable](./hashTable/HashTable.md)                    |
+| 31 Hash Table Repeated Word           | [RepeatedWordFinder](hashTable%2FRepeatedWordFinder.md)  |
+
