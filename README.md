@@ -2,7 +2,7 @@
 
 ---
 
-## Code Challanges Table
+## Code Challenges Table
 
 | Challenge Name                        | Challenge URL                                            |
 |---------------------------------------|----------------------------------------------------------|
