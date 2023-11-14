@@ -3,11 +3,17 @@
  */
 package hashTable.app.src.main.java.hashtable;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class App {
     public static void main(String[] args) {
         testHashtable();
         System.out.println("---");
         testRepeatedWordFinder();
+        System.out.println("---");
+        testLeftJoin();
     }
 
     private static void testHashtable() {
@@ -66,6 +72,28 @@ public class App {
             System.out.println("Repeated word in input4: " + RepeatedWordFinder.repeatedWord(input4));
         } catch (RuntimeException e) {
             System.out.println("Exception: " + e.getMessage());
+        }
+    }
+
+    private static void testLeftJoin() {
+        Map<String, String> synonyms = new HashMap<>();
+        synonyms.put("diligent", "employed");
+        synonyms.put("fond", "enamored");
+        synonyms.put("guide", "usher");
+        synonyms.put("outfit", "garb");
+        synonyms.put("wrath", "anger");
+
+        Map<String, String> antonyms = new HashMap<>();
+        antonyms.put("diligent", "idle");
+        antonyms.put("fond", "averse");
+        antonyms.put("guide", "follow");
+        antonyms.put("flow", "jam");
+        antonyms.put("wrath", "delight");
+
+        List<List<String>> result = LeftJoin.leftJoin(synonyms, antonyms);
+
+        for (List<String> row : result) {
+            System.out.println(row);
         }
     }
 }
