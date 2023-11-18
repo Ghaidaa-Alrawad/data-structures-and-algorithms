@@ -30,3 +30,4 @@
 | 30 Hash Table                         | [hashTable](./hashTable/HashTable.md)                         |
 | 31 Hash Table Repeated Word           | [RepeatedWordFinder](hashTable%2FRepeatedWordFinder.md)       |
 | 32 Tree Intersection                  | [treeintersection.md](TreeIntersection%2Ftreeintersection.md) |
+| 33 Left Join                          | [LeftJoin.md](hashTable%2FLeftJoin.md)                        |
