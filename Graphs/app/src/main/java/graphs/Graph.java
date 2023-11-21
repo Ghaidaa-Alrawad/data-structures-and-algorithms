@@ -45,4 +45,29 @@ public class Graph {
     public int size() {
         return adjacencyList.size();
     }
+
+    public Collection<Integer> breadthFirst(Node startNode) {
+        Set<Integer> visited = new HashSet<>();
+        List<Integer> result = new ArrayList<>();
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.add(startNode.getValue());
+        visited.add(startNode.getValue());
+
+        while (!queue.isEmpty()) {
+            int currentVertex = queue.poll();
+            result.add(currentVertex);
+
+            for (Edge edge : getNeighbors(currentVertex)) {
+                int neighborVertex = edge.targetVertex;
+                if (!visited.contains(neighborVertex)) {
+                    queue.add(neighborVertex);
+                    visited.add(neighborVertex);
+                }
+            }
+        }
+
+        System.out.println("Breadth-First Traversal Result: " + result);
+        return result;
+    }
 }

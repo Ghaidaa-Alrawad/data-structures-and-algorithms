@@ -1,6 +1,7 @@
 package Graphs.app.src.test.java.graphs;
 
 import Graphs.app.src.main.java.graphs.Graph;
+import Graphs.app.src.main.java.graphs.Node;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
@@ -55,5 +56,46 @@ public class GraphTest {
         graph.addVertex(2);
 
         assertEquals(2, graph.size());
+    }
+
+    @Test
+    public void testBreadthFirstTraversal() {
+        Graph graph = new Graph();
+        Node node1 = new Node(graph.addVertex(1));
+        Node node2 = new Node(graph.addVertex(2));
+        Node node3 = new Node(graph.addVertex(3));
+        Node node4 = new Node(graph.addVertex(4));
+
+        graph.addEdge(1, 2, 0);
+        graph.addEdge(1, 3, 0);
+        graph.addEdge(2, 4, 0);
+
+        Collection<Integer> result = graph.breadthFirst(node1);
+        assertTrue(result.contains(1));
+        assertTrue(result.contains(2));
+        assertTrue(result.contains(3));
+        assertTrue(result.contains(4));
+        assertEquals(4, result.size());
+    }
+
+    @Test
+    public void testBreadthFirstTraversalEmptyGraph() {
+        Graph graph = new Graph();
+        Node node1 = new Node(graph.addVertex(1));
+
+        Collection<Integer> result = graph.breadthFirst(node1);
+        assertTrue(result.contains(1));
+        assertEquals(1, result.size());
+    }
+
+    @Test
+    public void testBreadthFirstTraversalDisconnectedGraph() {
+        Graph graph = new Graph();
+        Node node1 = new Node(graph.addVertex(1));
+        Node node2 = new Node(graph.addVertex(2));
+
+        Collection<Integer> result = graph.breadthFirst(node1);
+        assertTrue(result.contains(1));
+        assertEquals(1, result.size());
     }
 }
