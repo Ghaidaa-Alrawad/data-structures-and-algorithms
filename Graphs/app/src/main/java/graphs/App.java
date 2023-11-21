@@ -30,5 +30,21 @@ public class App {
         singleVertexGraph.addEdge(1, 1, 3);
         System.out.println("Single vertex graph: " + singleVertexGraph.getVertices() +
                 ", Edge: " + singleVertexGraph.getNeighbors(1));
+
+        System.out.println("-------");
+        Graph graph2 = new Graph();
+        Node node1 = new Node(graph2.addVertex(1));
+        Node node2 = new Node(graph2.addVertex(2));
+        Node node3 = new Node(graph2.addVertex(3));
+        Node node4 = new Node(graph2.addVertex(4));
+
+        graph2.addEdge(1, 2, 0);
+        graph2.addEdge(1, 3, 0);
+        graph2.addEdge(2, 4, 0);
+
+        System.out.println("Graph Vertices: " + graph2.getVertices());
+        System.out.println("Graph Edges: " + graph2.size());
+
+        graph2.breadthFirst(node1);
     }
 }
