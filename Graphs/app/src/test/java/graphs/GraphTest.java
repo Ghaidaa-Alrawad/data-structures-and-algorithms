@@ -98,4 +98,53 @@ public class GraphTest {
         assertTrue(result.contains(1));
         assertEquals(1, result.size());
     }
+
+    @Test
+    void testBusinessTripValidRoute() {
+        Graph graph = new Graph();
+
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addEdge(1, 2, 5);
+        graph.addEdge(2, 3, 10);
+
+        String[] validRoute = {"1", "2", "3"};
+        Integer cost = graph.businessTrip(graph, validRoute);
+
+        assertNotNull(cost);
+        assertEquals(15, cost);
+    }
+
+    @Test
+    void testBusinessTripInvalidRoute() {
+        Graph graph = new Graph();
+
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addEdge(1, 2, 5);
+        graph.addEdge(2, 3, 10);
+
+        String[] invalidRoute = {"1", "3", "2"};
+        Integer cost = graph.businessTrip(graph, invalidRoute);
+
+        assertNull(cost);
+    }
+
+    @Test
+    void testBusinessTripNonExistentCity() {
+        Graph graph = new Graph();
+
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addEdge(1, 2, 5);
+        graph.addEdge(2, 3, 10);
+
+        String[] nonExistentCityRoute = {"1", "4", "3"};
+        Integer cost = graph.businessTrip(graph, nonExistentCityRoute);
+
+        assertNull(cost);
+    }
 }

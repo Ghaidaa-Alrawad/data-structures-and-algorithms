@@ -70,4 +70,42 @@ public class Graph {
         System.out.println("Breadth-First Traversal Result: " + result);
         return result;
     }
+
+    public Integer businessTrip(Graph graph, String[] cities) {
+        int cost = 0;
+
+        for (int i = 0; i < cities.length - 1; i++) {
+            int sourceVertex = findVertex(graph, cities[i]);
+            int targetVertex = findVertex(graph, cities[i + 1]);
+
+            if (sourceVertex == -1 || targetVertex == -1) {
+                return null;
+            }
+
+            boolean directFlightExists = false;
+
+            for (Graph.Edge edge : graph.getNeighbors(sourceVertex)) {
+                if (edge.targetVertex == targetVertex) {
+                    directFlightExists = true;
+                    cost += edge.weight;
+                    break;
+                }
+            }
+
+            if (!directFlightExists) {
+                return null;
+            }
+        }
+
+        return cost;
+    }
+
+    private int findVertex(Graph graph, String cityName) {
+        for (int vertex : graph.getVertices()) {
+            if (Integer.toString(vertex).equals(cityName)) {
+                return vertex;
+            }
+        }
+        return -1;
+    }
 }
