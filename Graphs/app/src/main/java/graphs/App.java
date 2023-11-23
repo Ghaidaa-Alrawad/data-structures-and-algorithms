@@ -46,5 +46,27 @@ public class App {
         System.out.println("Graph Edges: " + graph2.size());
 
         graph2.breadthFirst(node1);
+
+        System.out.println("--------");
+
+        Graph graph3 = new Graph();
+
+        graph3.addVertex(1);
+        graph3.addVertex(2);
+        graph3.addVertex(3);
+        graph3.addEdge(1, 2, 5);
+        graph3.addEdge(2, 3, 10);
+
+        String[] validRoute = {"1", "2", "3"};
+        Integer validCost = graph.businessTrip(graph3, validRoute);
+        System.out.println("Cost of valid route: " + validCost);
+
+        String[] invalidRoute = {"1", "3", "2"};
+        Integer invalidCost = graph.businessTrip(graph3, invalidRoute);
+        System.out.println("Cost of invalid route: " + invalidCost);
+
+        String[] nonExistentCityRoute = {"1", "4", "3"};
+        Integer nonExistentCityCost = graph3.businessTrip(graph3, nonExistentCityRoute);
+        System.out.println("Cost of route with non-existent city: " + nonExistentCityCost);
     }
 }

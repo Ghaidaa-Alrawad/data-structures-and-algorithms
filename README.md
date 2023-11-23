@@ -33,3 +33,4 @@
 | 33 Left Join                          | [LeftJoin.md](hashTable%2FLeftJoin.md)                        |
 | 35 Graph implementation               | [graph.md](Graphs%2Fgraph.md)                                 |
 | 36 Breadth First                      | [breadthFirst.md](Graphs%2FbreadthFirst.md)                   |
+| 37 Business Trip                      | [businessTrip.md](Graphs%2FbusinessTrip.md)                   |
