@@ -4,6 +4,8 @@ import Graphs.app.src.main.java.graphs.Graph;
 import Graphs.app.src.main.java.graphs.Node;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -146,5 +148,22 @@ public class GraphTest {
         Integer cost = graph.businessTrip(graph, nonExistentCityRoute);
 
         assertNull(cost);
+    }
+
+    @Test
+    public void testDepthFirst() {
+        Graph graph = new Graph();
+        Node node1 = new Node(graph.addVertex(1));
+        Node node2 = new Node(graph.addVertex(2));
+        Node node3 = new Node(graph.addVertex(3));
+        Node node4 = new Node(graph.addVertex(4));
+
+        graph.addEdge(1, 2, 0);
+        graph.addEdge(1, 3, 0);
+        graph.addEdge(2, 4, 0);
+
+        Collection<Integer> result = graph.depthFirst(node1);
+
+        assertEquals(Arrays.asList(1, 2, 4, 3), new ArrayList<>(result));
     }
 }
