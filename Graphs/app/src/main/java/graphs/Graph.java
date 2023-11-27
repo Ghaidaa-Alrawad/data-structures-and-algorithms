@@ -108,4 +108,26 @@ public class Graph {
         }
         return -1;
     }
+
+    public Collection<Integer> depthFirst(Node startNode) {
+        Set<Integer> visited = new HashSet<>();
+        List<Integer> result = new ArrayList<>();
+
+        depthFirstHelper(startNode.getValue(), visited, result);
+
+        System.out.println("Depth-First Traversal Result: " + result);
+        return result;
+    }
+
+    private void depthFirstHelper(int currentVertex, Set<Integer> visited, List<Integer> result) {
+        visited.add(currentVertex);
+        result.add(currentVertex);
+
+        for (Edge edge : getNeighbors(currentVertex)) {
+            int neighborVertex = edge.targetVertex;
+            if (!visited.contains(neighborVertex)) {
+                depthFirstHelper(neighborVertex, visited, result);
+            }
+        }
+    }
 }

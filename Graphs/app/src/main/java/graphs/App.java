@@ -68,5 +68,22 @@ public class App {
         String[] nonExistentCityRoute = {"1", "4", "3"};
         Integer nonExistentCityCost = graph3.businessTrip(graph3, nonExistentCityRoute);
         System.out.println("Cost of route with non-existent city: " + nonExistentCityCost);
+
+        System.out.println("-------");
+
+        Graph graph4 = new Graph();
+        Node node5 = new Node(graph4.addVertex(1));
+        Node node6 = new Node(graph4.addVertex(2));
+        Node node7 = new Node(graph4.addVertex(3));
+        Node node8 = new Node(graph4.addVertex(4));
+
+        graph4.addEdge(1, 2, 0);
+        graph4.addEdge(1, 3, 0);
+        graph4.addEdge(2, 4, 0);
+
+        System.out.println("Graph Vertices: " + graph4.getVertices());
+        System.out.println("Graph Edges: " + graph4.size());
+
+        graph4.depthFirst(node5);
     }
 }

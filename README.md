@@ -34,3 +34,4 @@
 | 35 Graph implementation               | [graph.md](Graphs%2Fgraph.md)                                 |
 | 36 Breadth First                      | [breadthFirst.md](Graphs%2FbreadthFirst.md)                   |
 | 37 Business Trip                      | [businessTrip.md](Graphs%2FbusinessTrip.md)                   |
+| 38 Depth First                        | [depthFirst.md](Graphs%2FdepthFirst.md)                       |
